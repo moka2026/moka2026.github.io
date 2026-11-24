@@ -6,6 +6,10 @@ classes: wide
 ---
 
 <style>
+    .page__title {
+    text-align: center;
+    margin-bottom: 1em; /* Optional: adds a little breathing room above your photo & text */
+  }
   @media (min-width: 64em) {
     .page {
       width: 100% !important;
