@@ -5,9 +5,18 @@ author_profile: false
 classes: wide
 ---
 
+<style>
+  @media (min-width: 64em) {
+    .page {
+      width: 100% !important;
+      padding-right: 0 !important;
+    }
+  }
+</style>
+
 <div style="display: flex; flex-wrap: wrap; gap: 2.5em; align-items: flex-start; margin-top: 1em;">
   
-  <div style="flex: 0 0 220px; max-width: 100%; text-align: center;">
+  <div style="flex: 0 0 240px; max-width: 100%; text-align: center;">
     <img src="/assets/images/about-photo.jpg" alt="Portrait of Jo" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.12); margin-bottom: 0.8em;">
       <p style="font-size: 0.9em; margin: 0;">
       <a href="mailto:outreach@jodavey.net">outreach@jodavey.net</a>
