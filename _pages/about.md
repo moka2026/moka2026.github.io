@@ -1,6 +1,6 @@
 ---
 permalink: /about/
-title: "About Jo"
+title: "About"
 author_profile: false
 classes: wide
 ---
