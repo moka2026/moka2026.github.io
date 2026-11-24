@@ -2,12 +2,16 @@
 permalink: /about/
 title: "About Jo"
 author_profile: false
+classes: wide
 ---
-<div style="display: flex; flex-wrap: wrap; gap: 2em; align-items: flex-start;">
-  <div style="flex: 0 0 240px; max-width: 100%;">
-    <img src="/assets/images/about-photo.jpg" alt="Portrait of Jo" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.12);">
+<div style="display: flex; flex-wrap: wrap; gap: 2.5em; align-items: flex-start;">
+  <div style="flex: 0 0 220; max-width: 100%; text-align: center;">
+    <img src="/assets/images/about-photo.jpg" alt="Portrait of Jo" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.12); margin-bottom: 0.8em;">
+      <p style="font-size: 0.9em; margin: 0;">
+      <a href="mailto:outreach@jodavey.net">outreach@jodavey.net</a>
+      </p>
   </div>
-  <div style="flex: 1; min-width: 280px;" markdown="1">
+  <div style="flex: 1; min-width: 300px;" markdown="1">
 
     
 **Hi there! My name is Jo, and I like sending things up into space.** I am an undergraduate Physics student with an interest in high-altitude instrumentation and atmospheric sciences. My most recent project involved measuring how ultraviolet and infrared radiation changes during a total solar eclipse.
