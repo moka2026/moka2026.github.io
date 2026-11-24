@@ -61,6 +61,49 @@ excerpt: "Physics & Aerospace Engineering Portfolio"
     font-size: 1.2em;
     margin-bottom: 1em;
   }
+    .about-section {
+    display: flex;
+    align-items: center;
+    gap: 2.5em;
+    max-width: 1000px;
+    margin: 3em auto;
+    padding: 0 20px;
+  }
+  .about-image {
+    flex: 0 0 280px; /* Fixed width for the image column on desktop */
+  }
+  .about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%; /* Use 50% if you prefer a circular headshot */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: block;
+  }
+  .about-text {
+    flex: 1;
+    text-align: left;
+  }
+  .about-text h2 {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    border-bottom: 2px solid #eaeaea;
+    padding-bottom: 0.3em;
+  }
+  /* Automatically stack image on top of text on mobile phones */
+  @media (max-width: 768px) {
+    .about-section {
+      flex-direction: column;
+      text-align: center;
+      gap: 1.5em;
+    }
+    .about-image {
+      flex: none;
+      width: 220px;
+    }
+    .about-text {
+      text-align: left;
+    }
+  }
 </style>
 
 <div class="video-hero">
@@ -69,11 +112,18 @@ excerpt: "Physics & Aerospace Engineering Portfolio"
   </video>
   <div class="video-hero-content">
     <h1>Joseph Gabriel Davey</h1>
-    <p>Undergraduate Physics &amp; Aerospace Engineering Portfolio</p>
+    <p>Applied Physics Portfolio</p>
     <a href="/about/" class="btn btn--light-outline btn--large">View Projects</a>
   </div>
 </div>
 
-<div style="text-align: center; max-width: 750px; margin: 0 auto 3em auto;">
-  <p>Welcome to my portfolio. Here I document my coursework, instrumentation builds, simulations, and research projects.</p>
+<div class="about-section">
+  <div class="about-image">
+    <img src="/assets/images/bio-photo.jpg" alt="Portrait of Jo Davey">
+  </div>
+  <div class="about-text">
+    <h2>About Your Name</h2>
+    <p>I am an undergraduate student studying Physics, with a focus on instrumentation, remote sensing, and experimental flight hardware. Here I document my coursework, lab builds, simulations, and research projects as I prepare for graduate school.</p>
+    <a href="/about/" class="btn btn--primary">More about Jo</a>
+  </div>
 </div>
