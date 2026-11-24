@@ -33,7 +33,7 @@ classes: wide
 
 Currently, I am an Administrative Assistant at Central Washington University, where I proudly support students, staff, and faculty across the natural and social sciences.
 
-In my spare time, I'm enjoying life with my wife, child, and four cats. I love learning about the arts and humanities, as well as the social and natural sciences. I fill my free time with gravel cycling, watercolor painting, and Chinese calligraphy. I'd love a chance to practice one of the four languages that I know.
+In my spare time, I enjoy life with my wife, child, and three cats. I love learning about the arts and humanities, as well as the social and natural sciences. I fill my free time with road and gravel cycling, watercolor painting, Chinese calligraphy, and knitting/sewing. I'd love a chance to practice one of the four languages that I know.
 
   </div>
 </div>
