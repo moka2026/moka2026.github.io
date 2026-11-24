@@ -3,6 +3,7 @@ permalink: /about/
 title: "About Jo"
 author_profile: false
 ---
+![Portrait of Jo](/assets/images/about-photo.jpg){: .align-left style="width: 240px; border-radius: 12px; margin-bottom: 1em;"}
 
 **Hi there! My name is Jo, and I like sending things up into space.** I am an undergraduate Physics student with an interest in high-altitude instrumentation and atmospheric sciences. My most recent project involved measuring how ultraviolet and infrared radiation changes during a total solar eclipse.
 
