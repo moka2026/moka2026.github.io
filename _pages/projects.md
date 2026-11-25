@@ -42,7 +42,7 @@ layout: splash
 </style>
 
 <div class="masthead">
-  <img src="projects-masthead.jpg" alt="Projects Masthead">
+  <img src="/assets/images/balloon-group.jpg" alt="Projects Masthead">
   <div class="masthead-content">
     <h1>Projects</h1>
     </div>
