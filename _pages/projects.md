@@ -135,6 +135,7 @@ classes: wide
   </a>
   </div>
   <div class="projects-project-row-content">
-  <h2><a href="/projects/uv-ir-sensors/">Low-cost eclipse UV/IR telemetry</h2>
+  <h2><a href="/projects/uv-ir-sensors/">Low-cost eclipse UV/IR telemetry</a></h2>
+    
   <p>Developed and deployed payload telemetry to measure high-altitude changes in UV and IR radiation during a total solar eclipse.</p>      </div>
 </div>
