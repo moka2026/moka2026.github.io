@@ -128,7 +128,7 @@ classes: wide
 <div class="projects-project-row">
   <div class="projects-project-row-image">
   <a href="/projects/uv-ir-sensors/">
-  <img src="assets/images/eclipse.jpg" alt="Eclipse thumbnail">
+  <img src="/assets/images/eclipse.jpg" alt="Eclipse thumbnail">
   </a>
   </div>
   <div class="projects-project-row-content">
