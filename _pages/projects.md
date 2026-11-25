@@ -2,6 +2,8 @@
 permalink: /projects/
 title: "Projects"
 layout: splash
+author_profile: false
+classes: wide
 ---
 <style>
   .projects-masthead {
@@ -54,7 +56,66 @@ layout: splash
     font-size: 1.2em;
     margin-bottom: 1em;
   }
+
+
+  
+  /* TWO-COLUMN PROJECT ROW COMPONENT */
+  .projects-project-row {
+    display: flex;
+    align-items: center;
+    gap: 2.5em;
+    max-width: 1000px;
+    margin: 3.5em auto;
+    padding-bottom: 3.5em;
+    border-bottom: 1px solid #eaeaea;
+      }
+  .projects-project-row:last-of-type {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  /* Photo column */
+  .projects-project-row-image { 
+    flex: 0 0 380px;
+    max-width: 100%; 
+  }
+  .projects-project-row-image img {
+  width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    display: block;
+  }
+  /* Content column */
+  .projects-project-row-content {
+  flex: 1;
+    text-align: left;
+      }
+  .projects-project-row-content h2 {
+  margin-top: 0;
+    margin-bottom: 0.4em;
+    border-bottom: none;
+    }
+
+    .projects-project-row-content p {
+    margin-bottom: 1.2em;
+    }
+
+  /* Mobile compatibility */
+  @media (max-width: 768px) {
+    .projects-project-row {
+      flex-direction: column;
+      gap: 1.5em;
+      margin: 2.5em auto;
+      padding-bottom: 2.5em;
+    }
+    .projects-project-row-image {
+      flex: none;
+      width: 100%;
+    }
 </style>
+
 
 <div class="projects-masthead">
   <img src="/assets/images/balloon-group.jpg" alt="Weather balloon group prepared for launch.">
@@ -62,3 +123,15 @@ layout: splash
     <h1>Projects</h1>
     </div>
   </div> 
+
+<!-- Project rows -->
+<div class="projects-project-row">
+  <div class="projects-project-row-image">
+  <a href="/projects/uv-ir-sensors/">
+  <img src="assets/images/eclipse.jpg" alt="Eclipse thumbnail">
+  </a>
+  </div>
+  <div class="projects-project-row-content">
+  <h2>Low-cost eclipse UV/IR telemetry</h2>
+  <p>Developed and deployed payload telemetry to measure high-altitude changes in UV and IR radiation during a total solar eclipse.</p>      </div>
+</div>
