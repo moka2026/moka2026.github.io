@@ -4,25 +4,35 @@
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: splash
 author_profile: false
-excerpt: "Physics & Aerospace Engineering Portfolio"
-feature_row:
-  - image_path: /assets/images/eclipse.jpg
-    alt: "Project 1 Thumbnail"
-    title: "Low-cost eclipse UV/IR telemetry"
-    excerpt: "Developed and deployed payload telemetry to measure high-altitude changes in UV and IR radiation during a total solar eclipse. "
+excerpt: "Applied Physics Portfolio"
+
+# Depreciated feature_row data. Feature row is now written directly in page markup
+#feature_row:
+#  - image_path: /assets/images/eclipse.jpg
+#    alt: "Project 1 Thumbnail"
+#    title: "Low-cost eclipse UV/IR telemetry"
+#    excerpt: "Developed and deployed payload telemetry to measure high-altitude changes in UV and IR radiation during a total solar eclipse. "
 #    url: "/projects/project-one/"
 #    btn_label: "Read More"
 #    btn_class: "btn--primary"
-  - image_path: /assets/images/balloon-group.jpg
-    alt: "Project 2 Thumbnail"
-    title: "Nationwide Eclipse Ballooning Project"
-    excerpt: "Supported and conducted field deployment of radiosonde-equipped weather balloons as part of NASA-funded research on gravitational waves."
+#  - image_path: /assets/images/balloon-group.jpg
+#    alt: "Project 2 Thumbnail"
+#    title: "Nationwide Eclipse Ballooning Project"
+#    excerpt: "Supported and conducted field deployment of radiosonde-equipped weather balloons as part of NASA-funded research on gravitational waves."
 #    url: "/projects/project-two/"
 #    btn_label: "Read More"
 #    btn_class: "btn--primary"
 ---
+
 <style>
-  .video-hero {
+  /* 2026/11/25 Changes needed in style block:
+  • Rename card styles "index-" and fix corresponding style references in page markup
+  • Rename video-hero to index-masthead
+  * Organize by section, maybe provide a table of contents
+    */
+  
+/* index-video */
+  .index-masthead {
     position: relative;
     width: 100vw;
     left: 50%;
@@ -41,7 +51,7 @@ feature_row:
     color: #ffffff;
     margin-bottom: 2em;
   }
-.video-hero video {
+.index-masthead video {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -53,29 +63,32 @@ feature_row:
     object-fit: cover;
     z-index: 1;
   }
-  .video-hero::after {
+  .inedx-masthead::after {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.45); /* Dark tint for readable text */
+    background: rgba(0, 0, 0, 0.45); 
     z-index: 2;
   }
-  .video-hero-content {
+  .index-masthead-content {
     position: relative;
     z-index: 3;
     max-width: 800px;
     padding: 0 20px;
   }
-  .video-hero-content h1 {
+  .index-masthead-content h1 {
     font-size: 2.5em;
     margin-bottom: 0.3em;
     color: #ffffff;
   }
-  .video-hero-content p {
+  .index-masthead-content p {
     font-size: 1.2em;
     margin-bottom: 1em;
   }
-    .about-section {
+
+  
+  /* ABOUT section */
+    .index-about {
     display: flex;
     align-items: center;
     gap: 2.5em;
@@ -83,48 +96,162 @@ feature_row:
     margin: 5em auto;
     padding: 0 20px;
   }
-  .about-image {
+  .index-about-image {
     flex: 0 0 280px; /* Fixed width for the image column on desktop */
   }
-  .about-image img {
+  .index-about-image img {
     width: 100%;
     height: auto;
     border-radius: 50%; /* Use 50% if you prefer a circular headshot */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     display: block;
   }
-  .about-text {
+  .index-about-text {
     flex: 1;
     text-align: left;
   }
-  .about-text h2 {
+  .index-about-text h2 {
     margin-top: 0;
     margin-bottom: 0.5em;
     border-bottom: 2px solid #eaeaea;
     padding-bottom: 0.3em;
   }
-  /* Automatically stack image on top of text on mobile phones */
+
+  
+  /* FEATURE section */
+  .index-featured-projects {
+  max-width: 1000px;
+  margin: 5em auto;
+  padding: 0 20px;
+}
+
+.index-featured-projects h2 {
+  text-align: center;
+  margin-bottom: 1.8em;
+}
+
+.index-featured-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  gap: 1.5em;
+}
+
+.index-featured-project-card {
+  position: relative;
+  display: block;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #222;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  text-decoration: none;
+  transition: transform 250ms ease, box-shadow 250ms ease;
+}
+
+.index-featured-project-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 250ms ease, transform 250ms ease;
+}
+
+.index-featured-project-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.48);
+  opacity: 0;
+  transition: opacity 250ms ease;
+}
+
+.index-featured-project-card-title {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25em;
+  color: #fff;
+  font-size: 1.15em;
+  font-weight: 700;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 250ms ease;
+}
+
+.index-featured-project-card:hover,
+.index-featured-project-card:focus-visible {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.index-featured-project-card:hover img,
+.index-featured-project-card:focus-visible img {
+  filter: brightness(0.78);
+  transform: scale(1.03);
+}
+
+.index-featured-project-card:hover::after,
+.index-featured-project-card:focus-visible::after,
+.index-featured-project-card:hover .index-featured-project-card-title,
+.index-featured-project-card:focus-visible .index-featured-project-card-title {
+  opacity: 1;
+}
+
+@media (hover: none) (pointer: coarse) {
+  .index-featured-project-card::after,
+  .index-featured-project-card .index-featured-project-card-title {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .index-featured-projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1em;
+  }
+}
+
+@media (max-width: 520px) {
+  .index-featured-projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .index-featured-project-card,
+  .index-featured-project-card img,
+  .index-featured-project-card::after,
+  .index-featured-project-card-title {
+    transition: none;
+  }
+}
+  
+  /* Media query for both ABOUT section and FEATURE section*/
   @media (max-width: 768px) {
-    .about-section {
+    .-index-about {
       flex-direction: column;
       text-align: center;
       gap: 1.5em;
     }
-    .about-image {
+    .index-about-image {
       flex: none;
       width: 220px;
     }
-    .about-text {
+    .index-about-text {
       text-align: left;
     }
   }
+
 </style>
 
-<div class="video-hero">
+<div class="index-masthead">
   <video autoplay loop muted playsinline poster="/assets/images/hero-poster.jpg">
     <source src="/assets/videos/hero-masthead.mp4" type="video/mp4">
   </video>
-  <div class="video-hero-content">
+  <div class="index-masthead-content">
     <h1>Joseph Gabriel Davey</h1>
     <p>Applied Physics Portfolio</p>
     <!-- 
@@ -133,18 +260,42 @@ feature_row:
   </div>
 </div>
 
-<div class="about-section">
-  <div class="about-image">
+<div class="index-about">
+  <div class="index-about-image">
     <img src="/assets/images/bio-photo.jpg" alt="Portrait of Jo Davey">
   </div>
-  <div class="about-text">
+  <div class="index-about-text">
     <h2>Joseph Gabriel Davey</h2>
     <p>Aspiring physicist with research interests in high-altitude instrumentation and planetary sciences. This site documents my research projects and science communication portfolio.</p>
     <a href="/about/" class="btn btn--primary">About Jo</a>
   </div>
 </div>
+<section class="featured-projects" aria-labelledby="featured-projects-heading">
+  <h2 id="featured-projects-heading">Featured Projects</h2>
 
-<div style="max-width: 1000px; margin: 5em auto; padding: 0 20px;">
-  <h2 style="text-align: center; margin-bottom: 1.8em;">Featured Projects</h2>
-  {% include feature_row %}
-</div>
+  <div class="index-featured-projects-grid">
+    <a class="index-featured-project-card"
+       href="/projects/uv-ir-sensors/"
+       aria-label="Low-cost eclipse UV/IR telemetry">
+      <img src="/assets/images/eclipse.jpg"
+           alt="Total solar eclipse observed during the UV/IR telemetry project"
+           loading="lazy">
+      <span class="index-featured-project-card-title" aria-hidden="true">
+        Low-cost eclipse UV/IR telemetry
+      </span>
+    </a>
+
+    <a class="index-featured-project-card"
+       href="/projects/"
+       aria-label="Nationwide Eclipse Ballooning Project">
+      <img src="/assets/images/balloon-group.jpg"
+           alt="Team preparing weather balloons for the Nationwide Eclipse Ballooning Project"
+           loading="lazy">
+      <span class="index-featured-project-card-title" aria-hidden="true">
+        Nationwide Eclipse Ballooning Project
+      </span>
+    </a>
+
+    <!-- Add another card here when you have a third project image, title, and URL. -->
+  </div>
+</section>
