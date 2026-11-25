@@ -93,12 +93,15 @@ classes: wide
     text-align: left;
       }
   .projects-project-row-content h2 {
-  margin-top: 0;
+    margin-top: 0;
     margin-bottom: 0.4em;
     border-bottom: none;
     }
-
-    .projects-project-row-content p {
+  .projects-project-row-content h2 a {
+    color: inherit;
+    text-decoration: none;
+}
+  .projects-project-row-content p {
     margin-bottom: 1.2em;
     }
 
@@ -132,6 +135,6 @@ classes: wide
   </a>
   </div>
   <div class="projects-project-row-content">
-  <h2>Low-cost eclipse UV/IR telemetry</h2>
+  <h2><a href="/projects/uv-ir-sensors/">Low-cost eclipse UV/IR telemetry</h2>
   <p>Developed and deployed payload telemetry to measure high-altitude changes in UV and IR radiation during a total solar eclipse.</p>      </div>
 </div>
