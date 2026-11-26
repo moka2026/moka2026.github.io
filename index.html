@@ -25,13 +25,7 @@ excerpt: "Applied Physics Portfolio"
 ---
 
 <style>
-  /* 2026/11/25 Changes needed in style block:
-  • Rename card styles "index-" and fix corresponding style references in page markup
-  • Rename video-hero to index-masthead
-  * Organize by section, maybe provide a table of contents
-    */
-  
-/* index-video */
+  /* index-video */
   .index-masthead {
     position: relative;
     width: 100vw;
@@ -51,7 +45,7 @@ excerpt: "Applied Physics Portfolio"
     color: #ffffff;
     margin-bottom: 2em;
   }
-.index-masthead video {
+  .index-masthead video {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -63,11 +57,11 @@ excerpt: "Applied Physics Portfolio"
     object-fit: cover;
     z-index: 1;
   }
-  .inedx-masthead::after {
+  .index-masthead::after {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.45); 
+    background: rgba(0, 0, 0, 0.45);
     z-index: 2;
   }
   .index-masthead-content {
@@ -86,9 +80,8 @@ excerpt: "Applied Physics Portfolio"
     margin-bottom: 1em;
   }
 
-  
   /* ABOUT section */
-    .index-about {
+  .index-about {
     display: flex;
     align-items: center;
     gap: 2.5em;
@@ -97,12 +90,12 @@ excerpt: "Applied Physics Portfolio"
     padding: 0 20px;
   }
   .index-about-image {
-    flex: 0 0 280px; /* Fixed width for the image column on desktop */
+    flex: 0 0 280px;
   }
   .index-about-image img {
     width: 100%;
     height: auto;
-    border-radius: 50%; /* Use 50% if you prefer a circular headshot */
+    border-radius: 50%;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     display: block;
   }
@@ -117,121 +110,66 @@ excerpt: "Applied Physics Portfolio"
     padding-bottom: 0.3em;
   }
 
-  
-  /* FEATURE section */
+  /* FEATURED PROJECTS section */
   .index-featured-projects {
-  max-width: 1000px;
-  margin: 5em auto;
-  padding: 0 20px;
-}
-
-.index-featured-projects h2 {
-  text-align: center;
-  margin-bottom: 1.8em;
-}
-
-.index-featured-projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
-  gap: 1.5em;
-}
-
-.index-featured-project-card {
-  position: relative;
-  display: block;
-  aspect-ratio: 4 / 3;
-  overflow: hidden;
-  border-radius: 10px;
-  background: #222;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-  text-decoration: none;
-  transition: transform 250ms ease, box-shadow 250ms ease;
-}
-
-.index-featured-project-card img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: filter 250ms ease, transform 250ms ease;
-}
-
-.index-featured-project-card::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.48);
-  opacity: 0;
-  transition: opacity 250ms ease;
-}
-
-.index-featured-project-card-title {
-  position: absolute;
-  z-index: 1;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1.25em;
-  color: #fff;
-  font-size: 1.15em;
-  font-weight: 700;
-  text-align: center;
-  opacity: 0;
-  transition: opacity 250ms ease;
-}
-
-.index-featured-project-card:hover,
-.index-featured-project-card:focus-visible {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-}
-
-.index-featured-project-card:hover img,
-.index-featured-project-card:focus-visible img {
-  filter: brightness(0.78);
-  transform: scale(1.03);
-}
-
-.index-featured-project-card:hover::after,
-.index-featured-project-card:focus-visible::after,
-.index-featured-project-card:hover .index-featured-project-card-title,
-.index-featured-project-card:focus-visible .index-featured-project-card-title {
-  opacity: 1;
-}
-
-@media (hover: none) (pointer: coarse) {
-  .index-featured-project-card::after,
-  .index-featured-project-card .index-featured-project-card-title {
-    opacity: 1;
+    max-width: 1000px;
+    margin: 5em auto;
+    padding: 0 20px;
   }
-}
-
-@media (max-width: 768px) {
+  .index-featured-projects h2 {
+    text-align: center;
+    margin-bottom: 1.8em;
+  }
   .index-featured-projects-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+    gap: 2.5em;
+    max-width: 860px;
+    margin: 0 auto;
   }
-}
-
-@media (max-width: 520px) {
-  .index-featured-projects-grid {
-    grid-template-columns: 1fr;
+  .index-featured-project-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85em;
+    min-width: 0;
+    color: inherit;
+    text-decoration: none;
+    transform: translateY(0);
+    transition: transform 220ms ease;
   }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .index-featured-project-card,
-  .index-featured-project-card img,
-  .index-featured-project-card::after,
+  .index-featured-project-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    transition: filter 220ms ease, box-shadow 220ms ease;
+  }
   .index-featured-project-card-title {
-    transition: none;
+    display: block;
+    font-size: 1.1em;
+    font-weight: 700;
+    line-height: 1.35;
+    text-align: center;
   }
-}
-  
-  /* Media query for both ABOUT section and FEATURE section*/
+  .index-featured-project-card:hover,
+  .index-featured-project-card:focus-visible {
+    transform: translateY(-4px);
+  }
+  .index-featured-project-card:hover img,
+  .index-featured-project-card:focus-visible img {
+    filter: brightness(0.94);
+    box-shadow: 0 9px 18px rgba(0, 0, 0, 0.17);
+  }
+  .index-featured-project-card:focus-visible {
+    outline: 3px solid #2f7fbd;
+    outline-offset: 5px;
+    border-radius: 10px;
+  }
+
   @media (max-width: 768px) {
-    .-index-about {
+    .index-about {
       flex-direction: column;
       text-align: center;
       gap: 1.5em;
@@ -243,8 +181,16 @@ excerpt: "Applied Physics Portfolio"
     .index-about-text {
       text-align: left;
     }
+    .index-featured-projects-grid {
+      gap: 1.5em;
+    }
   }
-
+  @media (prefers-reduced-motion: reduce) {
+    .index-featured-project-card,
+    .index-featured-project-card img {
+      transition: none;
+    }
+  }
 </style>
 
 <div class="index-masthead">
@@ -254,8 +200,8 @@ excerpt: "Applied Physics Portfolio"
   <div class="index-masthead-content">
     <h1>Joseph Gabriel Davey</h1>
     <p>Applied Physics Portfolio</p>
-    <!-- 
-    <a href="/about/" class="btn btn--light-outline btn--large">Projects coming soon!</a> 
+    <!--
+    <a href="/about/" class="btn btn--light-outline btn--large">Projects coming soon!</a>
     -->
   </div>
 </div>
@@ -270,30 +216,22 @@ excerpt: "Applied Physics Portfolio"
     <a href="/about/" class="btn btn--primary">About Jo</a>
   </div>
 </div>
-<section class="featured-projects" aria-labelledby="featured-projects-heading">
-  <h2 id="featured-projects-heading">Featured Projects</h2>
 
+<section class="index-featured-projects" aria-labelledby="featured-projects-heading">
+  <h2 id="featured-projects-heading">Featured Projects</h2>
   <div class="index-featured-projects-grid">
-    <a class="index-featured-project-card"
-       href="/projects/uv-ir-sensors/"
-       aria-label="Low-cost eclipse UV/IR telemetry">
+    <a class="index-featured-project-card" href="/projects/uv-ir-sensors/">
       <img src="/assets/images/eclipse.jpg"
-           alt="Total solar eclipse observed during the UV/IR telemetry project"
+           alt=""
            loading="lazy">
-      <span class="index-featured-project-card-title" aria-hidden="true">
-        Low-cost eclipse UV/IR telemetry
-      </span>
+      <span class="index-featured-project-card-title">Low-cost eclipse UV/IR telemetry</span>
     </a>
 
-    <a class="index-featured-project-card"
-       href="/projects/"
-       aria-label="Nationwide Eclipse Ballooning Project">
+    <a class="index-featured-project-card" href="/projects/">
       <img src="/assets/images/balloon-group.jpg"
-           alt="Team preparing weather balloons for the Nationwide Eclipse Ballooning Project"
+           alt=""
            loading="lazy">
-      <span class="index-featured-project-card-title" aria-hidden="true">
-        Nationwide Eclipse Ballooning Project
-      </span>
+      <span class="index-featured-project-card-title">Nationwide Eclipse Ballooning Project</span>
     </a>
 
     <!-- Add another card here when you have a third project image, title, and URL. -->
