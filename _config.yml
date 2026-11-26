@@ -19,7 +19,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   View Jo's undergraduate applied physics portfolio, with projects from high-altitude weather balloons to high-powered rocketry.
 twitter_username: username
 github_username: username
-minimal_mistakes_skin: default
+minimal_mistakes_skin: catppuccin_mocha
 search: true
 title_separator: "|"
 
